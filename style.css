@@ -17,7 +17,6 @@
 /*----Navbar----*/
 
 body {
-    min-height: 100vh;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -114,11 +113,11 @@ header {
 /* ----Section-----  */
 
 .home{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 .home-image img{
@@ -212,9 +211,8 @@ header {
 /* Contect Me Section */
 .contact-form{
     position: relative;
-    min-height: 101vh;
     z-index: 0;
-    background: var(--text-color-two);
+    background: var(--text-color);
     padding: 30px;
     justify-content: center;
     display: flex;
@@ -222,8 +220,8 @@ header {
     align-items: center;
 }
 .container{
-    max-width: 800px;
-    margin-top: 0 auto;
+    max-width: 600px;
+    margin-top: 10px;
 }
 .contact-form h2{
     line-height: 40px;
@@ -237,29 +235,16 @@ header {
     position: relative;
     display: flex;
     margin: 30px 0;
+    align-items: flex-start;
 }
 .content{
-    flex-basis: 50%;
-    padding: 3em 3em;
-    background: #fff;
+    width: 100%;
+    padding: 1em 1em;
+    background: var(--bg-color);
     box-shadow: 2px 9px 49px -17px rgba(156, 39, 148, 0.1);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius: 20px;
 }
-.form-img{
-    min-height: 49vh;
-    flex-basis: 73%;
-    background: #f0f4f8;
-    background-size: cover;
-    padding: 40px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    align-items: center;
-    display: grid;
-}
-.form-img img{
-    max-width: 100%;
-}
+
 
 .btn,
 button,
@@ -296,42 +281,19 @@ textarea{
     font-size: 18px;
     color: #fff;
     width: 100%;
-    background: #69275c;
+    background: var(--text-color);
     font-weight: 600;
     transition: 0.3s ease;
     padding: 14px 15px;
     border: 1px solid #69275c;
 
 }
-@media(max-width:736px){
-    .contact-form .main{
-        flex-direction: column;
-    }
-    .contact-form form{
-        margin-top: 30px;
-        margin-bottom: 10px;
 
-    }
-    .content{
-        order: 1;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-}
+
+
 
 
 /*----Navbar Responsive----*/
-@media (max-width: 1280px) {
-    header {
-        padding: 14px 2%;
-        transition: .2s;
-    }
-
-    .navbar a {
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
-}
 
 @media (max-width: 1090px) {
     #menu-icon {
@@ -343,7 +305,7 @@ textarea{
         top: 100%;
         right: -100%;
         width: 270px;
-        height: 32vh;
+        height: 27vh;
         background: var(--main-color);
         display: flex;
         flex-direction: column;
@@ -372,6 +334,7 @@ textarea{
 @media (max-width: 1000px) {
     .home {
         flex-direction: column;
+        margin-bottom: 350px;
     }
     .home-image img {
         margin-top: 100px;
@@ -379,3 +342,23 @@ textarea{
     }
 }
 
+/* Contant Responsive */
+@media(max-width:800px){
+    .contact-form{
+        margin-top: 500px;
+    }
+    .contact-form .main{
+        flex-direction: column;
+    }
+    .contact-form form{
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+    }
+    
+    .content{
+        order: 1;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
