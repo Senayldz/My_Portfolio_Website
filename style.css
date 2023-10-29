@@ -48,7 +48,7 @@ header {
 
 .logo span {
     color: var(--text-color-primary);
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
@@ -61,6 +61,7 @@ header {
     font-size: 1.1rem;
     font-weight: 500;
     padding: 5px 0;
+    margin: 0px 30px;
     transition: all .50s ease;
 }
 
@@ -332,10 +333,14 @@ textarea {
 
     .navbar.open {
         right: 2%;
-        overflow-y: scroll;
     }
 }
 
+@media (max-height: 900px){
+    .navbar.open{
+        overflow-y: scroll;
+    }
+}
 
 /* Section Responsive */
 @media (max-width: 1000px) {
